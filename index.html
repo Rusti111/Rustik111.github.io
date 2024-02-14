@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>С Днем Святого Валентина!</title>
+    <style>
+        body {
+            background-color: pink;
+            text-align: center;
+            padding: 50px;
+            font-family: Arial, sans-serif;
+        }
+        .heart {
+            position: relative;
+            width: 200px;
+            height: 180px; 
+            margin: 0 auto; 
+        }
+        .heart::before, .heart::after {
+            content: "";
+            position: absolute;
+            top: 80px;
+            width: 104px;
+            height: 160px;
+            border-radius: 100px 100px 0 0;
+            background: red;
+        }
+        .heart::before {
+            left: 100px;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+        .heart::after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+        @keyframes beat {
+            0% { transform: scale(1); }
+            50% { transform: scale(0.6); }
+            100% { transform: scale(1); }
+        }
+        .heart {
+            animation: beat 1s infinite;
+        }
+        .message {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>С Днем Святого Валентина, Имя!</h1>
+    <div class="heart"></div>
+    <div class="message">
+        <p>Я хочу сказать тебе, что ты очень важна для меня.</p>
+        <p>Ты освещаешь мою жизнь и делаешь каждый день особенным.</p>
+        <p>С любовью, твой программист ❤️</p>
+    </div>
+</body>
+</html>
